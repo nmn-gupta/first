@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--    <link rel="stylesheet" href="../css/style9.css" />-->
+    <title>Practical-9</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+      <style>
+
+      html {
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+.container {
+  min-width: 338px;
+  width: 100%;
+}
+#header {
+  background-color:black;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  width: 100%;
+}
+label.logo {
+  color: white;
+  font-size: 2.5vw;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+#header ul {
+  float: right;
+  margin-right: 20px;
+}
+#header ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+#header ul li a {
+  color: white;
+  font-size: 2vw;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 2px;
+}
+a.active,
+a:hover {
+  background: grey;
+  transition: 0.5s;
+}
+
+#header h2 {
+  margin: 0;
+  padding-top: 12px;
+}
+.checkbtn,
+.hide-btn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+#banner {
+  color: white;
+  margin-top: 10px;
+  height: 500px;
+  background: url("../images/background.jpg") no-repeat center center/cover;
+  margin-bottom: 70px;
+}
+#banner h2 {
+  font-size: 4vw;
+  padding: 5px 17px;
+  text-transform: uppercase;
+}
+
+/* this is for section-1 */
+#section-1 {
+  margin-bottom: 70px;
+  width: 100%;
+}
+#section-1 h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+.circle {
+  display: inline-block;
+  margin-left: 90px;
+}
+.circle img {
+  border-radius: 50%;
+}
+
+/* this is for section-2 */
+h1 {
+  text-align: center;
+}
+#section2 {
+  color: white;
+  padding: 3px;
+  display: flex;
+}
+.mainContent {
+  width: 50%;
+  height: 500px;
+  background-color:aliceblue;
+  color: black;
+  margin-right: 10px;
+}
+.mainContent h2 {
+  padding-top: 0px;
+  padding-left: 10px;
+}
+.mainContent p {
+  padding: 4px;
+  text-align: justify;
+  font-size: 1.5vw;
+}
+.articles {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 570px;
+  padding-bottom: 70px;
+}
+.articles .article1 {
+  padding-bottom: 120px;
+  background: url("../images/p1.jpg");
+}
+.articles .article2 {
+  padding-bottom: 120px;
+  background: url("../images/p2.jpeg");
+}
+.articles .article3 {
+  padding-bottom: 120px;
+  background: url("../images/p3.jpg");
+}
+
+.articles h1 {
+  color: black;
+  text-align: center;
+}
+
+/* this is card section */
+.main {
+  border: 2px solid black;
+  width: 20%;
+  margin: 32px;
+  padding-top: 9px;
+  background-color: darkgray;
+  border-radius: 12px;
+  float: left;
+  padding: 7px;
+  margin-bottom: 70px;
+}
+.box {
+  margin: 5px;
+  width: 25%;
+  margin-left: 10px;
+}
+.box img {
+  width: 370%;
+  height: 135px;
+  border-radius: 8px;
+}
+.content {
+  text-align: center;
+}
+.content h4 {
+  margin-bottom: 0px;
+}
+.content p {
+  padding-left: 13px;
+  padding-right: 13px;
+  margin-top: 10px;
+  text-align: justify;
+}
+.main a {
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  padding-top: 11px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.main a:hover {
+  background-color: blue;
+}
+
+/* this is for section-4 */
+.footer {
+  background-color: skyblue;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  display: table;
+}
+.footer h3 {
+  margin-top: 20px;
+  display: inline-block;
+}
+.footer .back {
+  font-size: 2vw;
+  display: block;
+  text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline
+}
+
+
+/* --- APPLYING  MEDIA QUERIES --- */
+
+@media (max-width: 1240px) {
+  /* for section2 */
+  .main {
+    margin: 29px;
+  }
+  .circle {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 1159px) {
+  #section-1 {
+    padding-left: 70px;
+  }
+
+  #circle4 {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* section card*/
+  .main {
+    width: 18%;
+    border-radius: 10px;
+  }
+
+  .content h4 {
+    font-size: 1.3vw;
+  }
+  .content p {
+    overflow: hidden;
+  }
+  .box {
+    margin: 0px;
+    width: 27%;
+    margin-left: 0px;
+  }
+  #cards {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 970px) {
+  #section-1 {
+    padding-left: 70px;
+  }
+  .circle img {
+    width: 140px;
+  }
+  .circle {
+    width: 100px;
+  }
+  #circle4 {
+    display: inline-block;
+  }
+  .main {
+    width: 24%;
+    margin: 31px;
+    padding-top: 9px;
+    padding: 7px;
+    margin-bottom: 20px;
+  }
+  #card4 {
+    margin-left: 320px;
+  }
+  #section-4 h1 {
+    margin-top: 470px;
+    padding-top: 470px;
+  }
+  .content h4 {
+    font-size: 1.7vw;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1103px) {
+  #header ul {
+    position: absolute;
+    top: 0px;
+    margin-left: 116px;
+  }
+  label.logo {
+    padding-left: 4px;
+  }
+  .mainContent p {
+    font-size: 1.7vw;
+  }
+}
+@media (max-width: 799px) {
+  .checkbtn,
+  .hide-btn {
+    display: block;
+  }
+  label.logo {
+    font-size: 25px;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    /* silder effect */
+    left: -100%;
+    width: 100%;
+    height: 80%;
+    background-color: black;
+    text-align: center;
+    padding: 0px 0;
+    transition: 0.79s;
+    line-height: normal;
+  }
+
+  #header ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  #header ul li a {
+    font-size: 20px;
+  }
+  a.active,
+  a:hover {
+    background: white;
+    color: #0082e6;
+  }
+  #check:checked ~ .menu {
+    left: 0;
+  }
+  .hide-btn {
+    float: right;
+    top: 0;
+    position: absolute;
+    margin-left: 730px;
+    right: 20px;
+    top: 0px;
+  }
+  .mainContent {
+    overflow: hidden;
+  }
+
+  #cards {
+    margin-left: 0px;
+  }
+  #card4 {
+    margin-top: -347px;
+  }
+  #card3,
+  #card4 {
+    margin: 31px;
+  }
+  .main {
+    width: 40%;
+    margin: 31px;
+    border-radius: 10px;
+  }
+  .content h4 {
+    font-size: 2.4vw;
+  }
+  /* circle */
+
+  #section-1 {
+    padding-left: 70px;
+  }
+  #circle4 {
+    display: flex;
+    margin-left: 234px;
+  }
+  .box {
+    margin: 0px;
+    margin-left: 0px;
+  }
+  .box img {
+    border-radius: 0px;
+  }
+  /* section4 */
+  #section-4 h1 {
+    margin-bottom: 0px;
+    margin-right: 200px;
+    margin-left: 220px;
+  }
+
+  .mainContent p {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 661px) {
+  #section-1 {
+    padding-left: 30px;
+  }
+  .circle {
+    width: 150px;
+  }
+  #circle4 {
+    margin-top: -145px;
+    margin-left: 273px;
+  }
+  .content h4 {
+    font-size: 4vw;
+  }
+
+  .main {
+    width: 60%;
+    margin-left: 100px;
+    border-radius: 10px;
+  }
+  #card3,
+  #card4 {
+    margin-left: 100px;
+  }
+
+  /* section2 */
+  #section2 {
+    display: block;
+  }
+  .mainContent {
+    width: 100%;
+    margin-bottom: 14px;
+    height: 250px;
+  }
+  .mainContent p {
+    font-size: 3vw;
+    font: bolder;
+  }
+
+  .articles {
+    width: 100%;
+    height: 610px;
+  }
+}
+
+@media (max-width: 487px) {
+  #section-1 h1 {
+    padding-left: 112px;
+  }
+  #section-1 #circle4 {
+    margin-left: 95px;
+  }
+  #circle1,
+  #circle2 {
+    padding-bottom: 12px;
+  }
+  #circle3 {
+    padding-bottom: 162px;
+  }
+  .circle {
+    display: block;
+    padding-left: 10px;
+  }
+  .circle img {
+    width: 200px;
+  }
+
+  #section-1 h1 {
+    margin-left: -95px;
+  }
+  h1 {
+    margin-left: 25px;
+  }
+  .cards,
+  .main {
+    margin-left: 40px;
+  }
+  #card1,
+  #card2 {
+    margin-left: 65px;
+  }
+  #card3,
+  #card4 {
+    margin-left: 65px;
+  }
+  .content h4 {
+    font-size: 4.5vw;
+  }
+
+  #section-4 h1 {
+    margin-top: 17em;
+    margin-left: 136px;
+  }
+  .footer {
+    margin-top: 10px;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    display: table;
+  }
+  .footer h3 {
+    font-size: 12px;
+  }
+  .footer .back {
+    font-size: 20px;
+    display: block;
+  }
+}
+
+
+
+
+      </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">
+<!--        <label class="logo">Design</label>-->
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fa fa-bars"></i>
+        </label>
+        <ul class="menu">
+          <li><a href="#">home</a></li>
+          <li><a href="#section2">about us</a></li>
+          <li><a href="#section-1">team</a></li>
+          <li><a href="#cards">technologies</a></li>
+          <li><a href="#section-4">contact</a></li>
+          <label for="check" class="hide-btn">
+            <i class="fa fa-times"></i>
+          </label>
+        </ul>
+      </div>
+      <div id="banner">
+        <h2>practical - 9</h2>
+      </div>
+
+      <div id="section-1">
+        <h1>team members</h1>
+        <div class="circle" id="circle1">
+          <img src="../images/1.png" alt="" />
+        </div>
+        <div class="circle" id="circle2">
+          <img src="../images/2.png" alt="" />
+        </div>
+        <div class="circle" id="circle3">
+          <img src="../images/3.png" alt="" />
+        </div>
+        <div class="circle" id="circle4">
+          <img src="../images/4.png" alt="" />
+        </div>
+      </div>
+
+      <h1>About Us</h1>
+      <div id="section2">
+        <div class="mainContent">
+          <h2>About Projects</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            porro alias deleniti magni inventore maxime id voluptates aperiam?
+            Harum quia tempore enim consequatur ad! Minus beatae facilis cumque
+            saepe deleniti error totam accusantium, fugit labore vitae nemo
+            temporibus repudiandae, consequuntur in, magni voluptatem! Sapiente
+            molestias recusandae maxime, placeat ipsa minus. Officia mollitia
+            quaerat tempora temporibus doloribus enim debitis aliquam laudantium
+            nostrum quibusdam ea sit illum, numquam, amet, modi eos nam
+            repellendus molestiae natus? Nesciunt harum qui soluta, laborum
+            pariatur explicabo beatae vero aspernatur officiis numquam.
+            Perspiciatis nostrum maxime, magni similique illo facilis ratione
+            repellat, consequuntur excepturi deleniti blanditiis maiores
+            mollitia rerum suscipit aliquid ullam impedit quibusdam? Cumque a
+            doloribus odit impedit, tempora, quos soluta, quasi consectetur
+            maiores corrupti eaque assumenda tenetur necessitatibus! Corrupti
+            doloremque, placeat quam unde voluptas dolorum corporis ab aut
+            incidunt obcaecati dignissimos? Recusandae tenetur culpa accusamus.
+            Fugit, non suscipit. Sunt blanditiis, qui soluta eos harum
+            accusantium nostrum velit, cum fugiat doloremque veniam
+            exercitationem laboriosam eligendi reprehenderit inventore aut
+            aliquam? Molestiae deleniti explicabo facilis nostrum ducimus,
+            maiores quo. Reprehenderit, magni praesentium. Sapiente aperiam
+            molestias ipsum quod natus necessitatibus possimus dolores facilis
+            obcaecati suscipit.
+          </p>
+        </div>
+        <div class="articles">
+          <div class="article1">
+            <h1>Project-1</h1>
+          </div>
+          <div class="article2">
+            <h1>Project-2</h1>
+          </div>
+          <div class="article3">
+            <h1>Project-3</h1>
+          </div>
+        </div>
+      </div>
+
+      <div id="cards">
+        <h1>Technologies Used</h1>
+        <div class="main" id="card1">
+          <div class="box">
+            <img src="../images/html.png" alt="" />
+          </div>
+          <div class="content">
+            <h4>Introduction to HTML</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
+              quasi atque temporibus iure accusantium neque tenetur amet
+              consectetur architecto nulla.
+            </p>
+            <a href="../frontendfiles/html.html">Read More</a>
+          </div>
+        </div>
+
+        <div class="main" id="card2">
+          <div class="box">
+            <img src="../images/css.png" alt="" />
+          </div>
+          <div class="content">
+            <h4>Introduction to CSS</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
+              quasi atque temporibus iure accusantium neque tenetur amet
+              consectetur architecto nulla.
+            </p>
+            <a href="../frontendfiles/css.html">Read More</a>
+          </div>
+        </div>
+
+        <div class="main" id="card3">
+          <div class="box">
+            <img src="../images/js.png" alt="" />
+          </div>
+          <div class="content">
+            <h4>Introduction to JavaScript</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
+              quasi atque temporibus iure accusantium neque tenetur amet
+              consectetur architecto nulla.
+            </p>
+            <a href="../frontendfiles/javascript.html">Read More</a>
+          </div>
+        </div>
+
+        <div class="main" id="card4">
+          <div class="box">
+            <img src="../images/bootstrap.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h4>Introduction to Bootstrap</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
+              quasi atque temporibus iure accusantium neque tenetur amet
+              consectetur architecto nulla.
+            </p>
+            <a href="../frontendfiles/bootstrap.html">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="section-4">
+        <h1>Contact</h1>
+        <div class="footer">
+          <h3>Website template for Practical-8 &copy</h3>
+          &nbsp;
+          <a href="https://www.beta-labs.in/">Beta-Labs</a>
+          <a class="back" href="#">Back to top</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
