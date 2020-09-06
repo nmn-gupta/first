@@ -1,0 +1,145 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#header {
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+#header ul {
+  margin-left: 90px;
+  display: flex;
+  height: 65px;
+}
+#header ul li {
+  list-style: none;
+  font-size:20px;
+}
+#header ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 17px 65px;
+  border-radius: 20px;
+}
+#header ul li:hover{
+  background-color: white;
+  margin: 6px;
+}
+#header ul li a:hover{
+  color:  black;
+  font-weight: bold;
+}
+
+#header h2 {
+  margin: 0;
+  padding-top: 12px;
+}
+#banner {
+  color: white;
+  margin-top: 10px;
+  height: 500px;
+  background: url("../images/background.jpg") no-repeat center center/cover;
+  margin-bottom: 70px;
+}
+
+#banner h2 {
+  font-size: 4vw;
+  padding: 5px 17px;
+  text-transform: uppercase;
+}
+
+/* this is for section-1 */
+#section-1 {
+  margin-bottom: 70px;
+}
+#section-1 h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+.circle {
+  display: inline-block;
+  margin-left: 85px;
+}
+.circle img {
+  border-radius: 50%;
+}
+
+/* this is for section-2 */
+h1 {
+  text-align: center;
+}
+#section2 {
+/*  color: white;*/
+  padding: 3px;
+  display: flex;
+}
+.mainContent {
+  width: 50%;
+  height: 500px;
+  background-color: aliceblue;
+  color: black;
+  margin-right: 10px;
+}
+.mainContent h2 {
+  padding-top: 0px;
+  padding-left: 10px;
+}
+.mainContent p {
+  padding: 4px;
+  text-align: justify;
+  font-size: 18px;
+}
+.articles {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 500px;
+  padding-bottom: 70px;
+}
+.articles .article1 {
+  padding-bottom: 80px;
+  background: url("../images/p1.jpg");
+}
+.articles .article2 {
+  padding-bottom: 80px;
+  background: url("../images/p2.jpeg");
+}
+.articles .article3 {
+  padding-bottom: 80px;
+  background: url("../images/p3.jpg");
+}
+
+.articles h1 {
+  color: black;
+  text-align: center;
+}
+
+
+
+
+
+
+.footer {
+  color: black;
+  background-color: skyblue;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  display: table;
+}
+.footer h3 {
+  display: inline-block;
+}
+.footer .back {
+  font-size: 30px;
+  display: block;
+  text-decoration: none;
+
+
+}
+.footer a:hover{
+    text-decoration: underline
+}
