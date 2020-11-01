@@ -54,7 +54,7 @@
 
         <h1> Counter</h1>
         <div class="counter">
-        <button id="minus">-</button>
+        <button id="minus" disabled>-</button>
         <p style="color: black; font-size: 28px;" id="number">0</p>
         <button id="plus">+</button>
         </div>
@@ -62,7 +62,32 @@
         </div>
 
 
+<script>
+        var minus=document.getElementById("minus");
+        var plus=document.getElementById("plus");
+        var number=document.getElementById("number");
+        var n=0;
 
+        plus.addEventListener('click',function(){
+           minus.disabled=false;
+            n+=1;
+            number.innerHTML=n;
+
+        });
+
+        minus.addEventListener('click', function(){
+            if(n>=1){
+            n-=1;
+            number.innerHTML=n;
+
+            if(n==0){
+                minus.disabled=true;
+            }
+        }
+
+});
+
+        </script>
 
 
     </body>
