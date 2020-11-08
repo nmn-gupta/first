@@ -80,7 +80,7 @@ function create(e) {
 
     todoList.appendChild(newDiv);
   } else {
-    alert("Do not include empty string!");
+    alert("Please write something!");
   }
   todoInput.value = "";
 }
